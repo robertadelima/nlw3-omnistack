@@ -1,15 +1,20 @@
 import React from 'react';
 
-function Title () {
+interface TitleProps {
+  text: string,
+}
+
+function Title (props : TitleProps) {
   return (
-    <h1>Hello World from Title</h1>
+  <h1>{props.text}</h1>
   )
 }
 
 function App() {
   return (
     <div className="App">
-      <Title />
+      <Title text="Next Level Week #3" />
+      <Title text="Trilha Omnistack" />
     </div>
   );
 }
